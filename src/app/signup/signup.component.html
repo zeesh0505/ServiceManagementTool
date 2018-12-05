@@ -62,7 +62,8 @@
                       <div class="form-group">
                         <input type="text" class="form-control" placeholder="`Answer *" value="" />
                       </div> -->
-                    <input type="submit" class="btnRegister" [disabled]="!regisForm.valid" value="Register" />
+                    <!-- <input type="submit" class="btnRegister" [disabled]="!regisForm.valid" value="Register" /> -->
+                    <a class="btn rounded-btn" (click)="userRegis()" >{{ 'Register' | translate }}</a>&nbsp;
                   </div>
                 </div>
               </div>
