@@ -3,7 +3,7 @@ $topnav-background-color: #222;
     border-radius: 0;
     position: fixed;
     z-index: 1000;
-    top: 56px;
+    top: 0px;
     left: 235px;
     width: 235px;
     margin-left: -235px;
@@ -81,7 +81,7 @@ $topnav-background-color: #222;
             background: darken($topnav-background-color, 5%);
         }
         .panel-collapse {
-            border-radious: 0;
+            border-radius: 0;
             border: none;
             .panel-body {
                 .list-group-item {
@@ -130,10 +130,10 @@ $topnav-background-color: #222;
     }
 }
 @media screen and (max-width: 992px) {
-    .sidebar {
-        top: 54px;
-        left: 0px;
-    }
+    // .sidebar {
+    //     top: 54px;
+    //     left: 0px;
+    // }
 }
 @media print {
     .sidebar {
