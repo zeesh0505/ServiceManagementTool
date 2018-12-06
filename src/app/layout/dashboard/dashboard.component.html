@@ -4,7 +4,7 @@
         <ngb-tab title="In-house">
             <ng-template ngbTabContent>
                 <div class="col-sm-12 padng-rem">
-                    <div class="card text-white bg-warning mb-3">
+                    <div class="card text-white mb-3 dash-custom-card">
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-sm-8">
@@ -19,13 +19,40 @@
                         </div>
                     </div>
                 </div>
-                <div class="card mb-3">
-                        <div class="card-header">
-                            <div class="row">
-                                <div class="col-sm-4">
-                                    <form role="form">
-                                        <div class="form-group input-group">
-                                            <div class="input-group-prepend">
+                <div class="card mb-3 dash-form-control">
+                    <div class="card-header">
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <form role="form">
+                                    <div class="form-group input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text" id="basic-addon1">
+                                                <select class="form-control filter-wid-dd">
+                                                    <option>Name</option>
+                                                    <option>Date</option>
+                                                    <option>Job Sheet No</option>
+                                                    <option>IMEI No</option>
+                                                </select>
+                                            </span>
+                                        </div>
+                                        <input type="text" class="form-control" placeholder="Username">
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="col-sm-4">
+                                <form role="form">
+                                    <div class="form-group input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text" id="basic-addon1">
+                                                <select class="form-control filter-wid-dd">
+                                                    <option>Name</option>
+                                                    <option>Date</option>
+                                                    <option>Job Sheet No</option>
+                                                    <option>IMEI No</option>
+                                                </select>
+                                            </span>
+                                        </div>
+                                        <div class="input-group-prepend">
                                                 <span class="input-group-text" id="basic-addon1">
                                                     <select class="form-control filter-wid-dd">
                                                         <option>Name</option>
@@ -35,14 +62,31 @@
                                                     </select>
                                                 </span>
                                             </div>
-                                            <input type="text" class="form-control" placeholder="Username">
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="col-sm-5">
+                                <form role="form">
+                                    <div class="form-group input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text" id="basic-addon1">
+                                                <select class="form-control filter-wid-dd">
+                                                    <option>Name</option>
+                                                    <option>Date</option>
+                                                    <option>Job Sheet No</option>
+                                                    <option>IMEI No</option>
+                                                </select>
+                                            </span>
                                         </div>
-                                    </form>
-                                </div>
+                                        <input type="text" class="form-control" placeholder="Username">
+                                        <input type="text" class="form-control" placeholder="Username">
+                                    </div>
+                                </form>
+                            </div>
                             </div>
                             
                         </div>
-                        <div class="card-body table-responsive">
+                        <div class="card-body table-responsive jobsheet-table-font">
                             <table class="table table-hover table-striped">
                                 <thead>
                                 <tr>
