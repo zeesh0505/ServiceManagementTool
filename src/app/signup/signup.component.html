@@ -8,7 +8,7 @@
           <!-- <input type="submit" name="" routerLink="/dashboard" value="Login" /><br /> -->
           <a class="btn rounded-btn" [routerLink]="['/login']">{{ 'Log in' | translate }}</a><br/>
         </div>
-        <form  class="regis-form">
+        <!-- <form name="form" class="regis-form" (ngSubmit)="regisForm.form.valid && onSubmit()" #regisForm="ngForm" novalidate> -->
           <div class="col-md-9 register-right">
             <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
               <li class="nav-item">
@@ -23,30 +23,55 @@
             <div class="tab-content" id="myTabContent">
               <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                 <h3 class="register-heading">Apply as a Employee</h3>
+                <form name="form" class="regis-form" (ngSubmit)="regisForm.form.valid && onSubmit()" #regisForm="ngForm" novalidate>
                 <div class="row register-form">
                   <div class="col-md-6">
                     <div class="form-group">
-                      <input type="text" class="form-control" placeholder="First Name *" value="" required ngModel/>
+                      <input type="text" class="form-control" name="firstName" [(ngModel)]="regisModel.first_name" #firstName="ngModel" [ngClass]="{ 'is-invalid': regisForm.submitted && firstName.invalid }" placeholder="First Name *"  required />
+                      <div *ngIf="regisForm.submitted && firstName.invalid" class="invalid-feedback">
+                          <div *ngIf="firstName.errors.required">First Name is required</div>
+                      </div>
                     </div>
                     <div class="form-group">
-                      <input type="text" class="form-control" formControlName="firstName" placeholder="Last Name *" value="" required ngModel/>
+                      <input type="text" class="form-control" name="lastName" [(ngModel)]="regisModel.last" #lastName="ngModel" [ngClass]="{ 'is-invalid': regisForm.submitted && lastName.invalid }"placeholder="Last Name *" value="" required/>
+                      <div *ngIf="regisForm.submitted && lastName.invalid" class="invalid-feedback">
+                          <div *ngIf="lastName.errors.required">Last Name is required</div>
+                      </div>
                     </div>
                     <div class="form-group">
-                      <input type="email" class="form-control" placeholder="Email *" value="" />
+                      <input type="email" class="form-control"  name="email" [(ngModel)]="regisModel.email" #email="ngModel" [ngClass]="{ 'is-invalid': regisForm.submitted && email.invalid }" placeholder="Email *" value="" required />
+                      <div *ngIf="regisForm.submitted && email.invalid" class="invalid-feedback">
+                          <div *ngIf="email.errors.required">Email is required</div>
+                          <div *ngIf="email.errors.email">Email must be a valid email address</div>
+                      </div>
                     </div>
                     <div class="form-group">
-                      <input type="text" maxlength="10" minlength="10" class="form-control" placeholder="Phone *" value="" />
+                      <input type="tel" maxlength="10" minlength="10" class="form-control" name="phone" [(ngModel)]="regisModel.mobile_no" #phone="ngModel" [ngClass]="{ 'is-invalid': regisForm.submitted && phone.invalid }" placeholder="Phone *" value="" required/>
+                      <div *ngIf="regisForm.submitted && phone.invalid" class="invalid-feedback">
+                          <div *ngIf="phone.errors.required">Mobile No. is required</div>
+                          <div *ngIf="phone.errors.minlength">Invalid Mobile No.:</div>
+                      </div>
                     </div>
                   </div>
                   <div class="col-md-6">
                     <div class="form-group">
-                      <input type="text" class="form-control" placeholder="Organisation Name *" value="" />
+                      <input type="text" class="form-control" name="orgName" [(ngModel)]="regisModel.org_name" #orgName="ngModel" [ngClass]="{ 'is-invalid': regisForm.submitted && firstName.invalid }" placeholder="Organisation Name *" value="" required  />
+                      <div *ngIf="regisForm.submitted && orgName.invalid" class="invalid-feedback">
+                          <div *ngIf="orgName.errors.required">Organisation Name is required</div>
+                      </div>
                     </div>
                     <div class="form-group">
-                      <input type="text" class="form-control" placeholder="User ID *" value="" />
+                      <input type="text" class="form-control" name="orgName" [(ngModel)]="regisModel.user_id" #userId="ngModel" [ngClass]="{ 'is-invalid': regisForm.submitted && userId.invalid }" placeholder="User ID *" value="" required  />
+                      <div *ngIf="regisForm.submitted && userId.invalid" class="invalid-feedback">
+                          <div *ngIf="userId.errors.required">User Id Name is required</div>
+                      </div>
                     </div>
                     <div class="form-group">
-                      <input type="password" class="form-control" placeholder="Password *" value="" />
+                      <input type="password" class="form-control" name="password" [(ngModel)]="regisModel.password" #password="ngModel" [ngClass]="{ 'is-invalid': regisForm.submitted && password.invalid }" minlength="4" placeholder="Password *" value=""  required  />
+                        <div *ngIf="regisForm.submitted && password.invalid" class="invalid-feedback">
+                            <div *ngIf="password.errors.required">Password is required</div>
+                            <div *ngIf="password.errors.minlength">Password must be at least 6 characters</div>
+                        </div>
                     </div>
                     <div class="form-group">
                       <input type="password" class="form-control" placeholder="Confirm Password *" value="" />
@@ -63,9 +88,15 @@
                         <input type="text" class="form-control" placeholder="`Answer *" value="" />
                       </div> -->
                     <!-- <input type="submit" class="btnRegister" [disabled]="!regisForm.valid" value="Register" /> -->
-                    <a class="btn rounded-btn" (click)="userRegis()" >{{ 'Register' | translate }}</a>&nbsp;
+                    <div class="form-group">
+                        <button id="submitForm" class="btn btn-primary">{{ 'Register' | translate }}</button>
+                        <!-- <input id="submitForm" type="submit" class="btn btn-success form-btn" value="Register" name="associateUpdate"/> -->
+                    </div>
+                    <!-- <a class="btn rounded-btn" (click)="userRegis()" >{{ 'Register' | translate }}</a>&nbsp;
+                    <input id="submitForm" type="submit" class="btn btn-success form-btn" value="Register" name="associateUpdate"/> -->
                   </div>
                 </div>
+              </form>
               </div>
               <div class="tab-pane fade show" id="profile" role="tabpanel" aria-labelledby="profile-tab">
                 <h3 class="register-heading">Apply as a Hirer</h3>
@@ -115,7 +146,7 @@
               </div>
             </div>
           </div>
-        </form>
+        <!-- </form> -->
       </div>
     </div>
   </div>
