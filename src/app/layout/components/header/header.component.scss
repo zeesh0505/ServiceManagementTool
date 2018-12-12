@@ -4,6 +4,8 @@ $topnav-background-color: #222;
         background-color: $topnav-background-color;
         .navbar-brand {
             color: #fff;
+            font-weight: bold;
+            font-size: medium;
         }
         .nav-item > a {
             color: #999;
@@ -11,6 +13,9 @@ $topnav-background-color: #222;
                 color: #fff;
             }
         }
+    }
+    .header-size-adj{
+        height: 2.5rem;;
     }
     .messages {
         width: 300px;
