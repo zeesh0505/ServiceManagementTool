@@ -66,50 +66,17 @@ export class GeneralService {
   //   ]);
 
   public registrationApi(regisData : any):Observable<any>{
-
-    // let headers = new HttpHeaders();
-    // let body = new HttpParams();
-    // body = body.set('user', 'zeeshan');
-    // body = body.set('name', 'zeeshan');
-    // body = body.set('password', 'passwrd');
-
-
     let headers = new HttpHeaders({ 'Content-Type': 'application/json' });   
     let params = new HttpParams();
-    params = params.append('user', 'zeeshan'); 
-    params = params.append('name', 'zeeshan'); 
-    params = params.append('password', 'passwrd'); 
-
-    // const body = 'user=zeeshan&name=zeeshan&password=passwrd';
-    // headers = new HttpHeaders({ 'Content-Type': '' });   
-    // var options =  {headers: headers};
     let url = 'http://zizinternational.in/service/trial/backendstuff.php';
-    // return this.httpClient.post<any>(url,body,options );
     return this.httpClient.post<any>(url,regisData,{ headers: headers });
   }
 
-  public loginApi(obj):Observable<any>{
-
-    // let headers = new HttpHeaders();
-    let body = new HttpParams();
-    body = body.set('user', 'zeeshan');
-    body = body.set('password', 'ssss');
-
-    // var FormData = require('form-data');
+  public loginApi(loginData : any):Observable<any>{
     let headers = new HttpHeaders({ 'Content-Type': 'application/json' });   
-    // let form: FormData = new FormData(); 
-    // form.append('user', 'zeeshan'); 
-    // form.append('name', 'zeeshan'); 
-    // form.append('password', 'passwrd'); 
-  //   for (var pair of form.toString()) {
-  //     console.log(pair[0]+ ', ' + pair[1]); 
-  // }
-    // const body = 'user=zeeshan&name=zeeshan&password=passwrd';
-    // headers = new HttpHeaders({ 'Content-Type': '' });   
-    var options =  {headers: headers};
+    let params = new HttpParams();
     let url = 'http://zizinternational.in/service/trial/backendstuff.php';
-    return this.httpClient.post<any>(url,body,options );
-    // return this.httpClient.post<any>(url,obj,{ headers: headers });
+    return this.httpClient.post<any>(url,loginData,{ headers: headers });
   }
 
    }

@@ -27,15 +27,16 @@ export class SignupComponent implements OnInit {
 
     
     userRegis(obj){
-        // var obj = [{
-        //   "first_name": "Zeeshan",
-        //   "password": "2222",
-        //   "last_name": "haider",
-        //   "mobile_no": "9999999999",
-        //   "org_name": "xyz comp",
-        //   "user_id": "bbb",
-        //   "email": "zee@xyz.com"
-        // }];
+        var obj1 = [{
+          "first_name": "Zeeshan",
+          "password": "2222",
+          "last_name": "haider",
+          "mobile_no": "9999999999",
+          "org_name": "xyz comp",
+          "user_id": "bbb",
+          "email": "zee@xyz.com",
+          "data": "register",
+        }];
     
         this.generalClient.registrationApi(obj)
       .subscribe(

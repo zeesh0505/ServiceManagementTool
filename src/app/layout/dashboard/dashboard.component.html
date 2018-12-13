@@ -101,25 +101,29 @@
                                     <th>Escalated to</th>
                                     <th>Current Assighnee</th>
                                     <th>Action</th>
-                                    <th>Revenue</th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
                                 </tr>
                                 </thead>
                                 <tbody>
-                                <tr>
-                                    <td>/index.html</td>
-                                    <td>1265</td>
-                                    <td>32.3%</td>
-                                    <td>$321.33</td>
-                                    <td>/index.html</td>
-                                    <td>1265</td>
-                                    <td>32.3%</td>
-                                    <td>$321.33</td>
-                                    <td>/index.html</td>
-                                    <td>1265</td>
-                                    <td>32.3%</td>
-                                    <td>$321.33</td>
+                                <tr *ngFor="let item of jobSheetDetail">
+                                    <td>{{item.jbDate}}</td>
+                                    <td>{{item.jbNo}}</td>
+                                    <td>{{item.imeiNo}}</td>
+                                    <td>{{item.mobNo}}</td>
+                                    <td>{{item.deviceName}}</td>
+                                    <td>{{item.custName}}</td>
+                                    <td>{{item.jbstatus}}</td>
+                                    <td>{{item.tat}}</td>
+                                    <td>{{item.escltdTo}}</td>
+                                    <td>{{item.crrntAssn}}</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
                                 </tr>
-                                <tr>
+                                <!-- <tr>
                                     <td>/about.html</td>
                                     <td>261</td>
                                     <td>33.3%</td>
@@ -202,7 +206,7 @@
                                     <td>1233</td>
                                     <td>93.2%</td>
                                     <td>$126.34</td>
-                                </tr>
+                                </tr> -->
                                 </tbody>
                             </table>
                         </div>
