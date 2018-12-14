@@ -1,5 +1,7 @@
 <div [@routerTransition]>
-    <h4 class="text-muted">Job Sheet Details Overview</h4>
+    <div class="card-header">
+        <h4 class="text-muted">Job Sheet Details Overview</h4>
+    </div>
     <ngb-tabset>
         <ngb-tab title="In-house">
             <ng-template ngbTabContent>
@@ -12,10 +14,11 @@
                                     <p class="card-text">Create new job sheets, manage services and generate invoices</p>
                                 </div>
                                 <div class="col-sm-4 pull right">
-                                    <a href="" class="btn btn-primary btn-md pull-right" role="button">CREATE NEW JOB SHEET</a>        
+                                    <a href="" class="btn btn-primary btn-md pull-right" role="button">CREATE NEW JOB
+                                        SHEET</a>
                                 </div>
                             </div>
-                            
+
                         </div>
                     </div>
                 </div>
@@ -53,15 +56,15 @@
                                             </span>
                                         </div>
                                         <div class="input-group-prepend">
-                                                <span class="input-group-text" id="basic-addon1">
-                                                    <select class="form-control filter-wid-dd">
-                                                        <option>Name</option>
-                                                        <option>Date</option>
-                                                        <option>Job Sheet No</option>
-                                                        <option>IMEI No</option>
-                                                    </select>
-                                                </span>
-                                            </div>
+                                            <span class="input-group-text" id="basic-addon1">
+                                                <select class="form-control filter-wid-dd">
+                                                    <option>Name</option>
+                                                    <option>Date</option>
+                                                    <option>Job Sheet No</option>
+                                                    <option>IMEI No</option>
+                                                </select>
+                                            </span>
+                                        </div>
                                     </div>
                                 </form>
                             </div>
@@ -83,12 +86,12 @@
                                     </div>
                                 </form>
                             </div>
-                            </div>
-                            
                         </div>
-                        <div class="card-body table-responsive jobsheet-table-font">
-                            <table class="table table-hover table-striped table-bordered">
-                                <thead>
+
+                    </div>
+                    <div class="card-body table-responsive jobsheet-table-font">
+                        <table class="table table-hover table-striped table-bordered">
+                            <thead>
                                 <tr>
                                     <th>Date</th>
                                     <th>Job Sheet No.</th>
@@ -105,8 +108,8 @@
                                     <th></th>
                                     <th></th>
                                 </tr>
-                                </thead>
-                                <tbody>
+                            </thead>
+                            <tbody>
                                 <tr *ngFor="let item of jobSheetDetail">
                                     <td>{{item.jbDate}}</td>
                                     <td>{{item.jbNo}}</td>
@@ -123,105 +126,26 @@
                                     <td></td>
                                     <td></td>
                                 </tr>
-                                <!-- <tr>
-                                    <td>/about.html</td>
-                                    <td>261</td>
-                                    <td>33.3%</td>
-                                    <td>$234.12</td>
-                                    <td>/about.html</td>
-                                    <td>261</td>
-                                    <td>33.3%</td>
-                                    <td>$234.12</td>
-                                    <td>/about.html</td>
-                                    <td>261</td>
-                                    <td>33.3%</td>
-                                    <td>$234.12</td>
-                                </tr>
-                                <tr>
-                                    <td>/sales.html</td>
-                                    <td>665</td>
-                                    <td>21.3%</td>
-                                    <td>$16.34</td>
-                                    <td>/sales.html</td>
-                                    <td>665</td>
-                                    <td>21.3%</td>
-                                    <td>$16.34</td>
-                                    <td>/sales.html</td>
-                                    <td>665</td>
-                                    <td>21.3%</td>
-                                    <td>$16.34</td>
-                                </tr>
-                                <tr>
-                                    <td>/blog.html</td>
-                                    <td>9516</td>
-                                    <td>89.3%</td>
-                                    <td>$1644.43</td>
-                                    <td>/blog.html</td>
-                                    <td>9516</td>
-                                    <td>89.3%</td>
-                                    <td>$1644.43</td>
-                                    <td>/blog.html</td>
-                                    <td>9516</td>
-                                    <td>89.3%</td>
-                                    <td>$1644.43</td>
-                                </tr>
-                                <tr>
-                                    <td>/404.html</td>
-                                    <td>23</td>
-                                    <td>34.3%</td>
-                                    <td>$23.52</td>
-                                    <td>/404.html</td>
-                                    <td>23</td>
-                                    <td>34.3%</td>
-                                    <td>$23.52</td>
-                                    <td>/404.html</td>
-                                    <td>23</td>
-                                    <td>34.3%</td>
-                                    <td>$23.52</td>
-                                </tr>
-                                <tr>
-                                    <td>/services.html</td>
-                                    <td>421</td>
-                                    <td>60.3%</td>
-                                    <td>$724.32</td>
-                                    <td>/services.html</td>
-                                    <td>421</td>
-                                    <td>60.3%</td>
-                                    <td>$724.32</td>
-                                    <td>/services.html</td>
-                                    <td>421</td>
-                                    <td>60.3%</td>
-                                    <td>$724.32</td>
-                                </tr>
-                                <tr>
-                                    <td>/blog/post.html</td>
-                                    <td>1233</td>
-                                    <td>93.2%</td>
-                                    <td>$126.34</td>
-                                    <td>/blog/post.html</td>
-                                    <td>1233</td>
-                                    <td>93.2%</td>
-                                    <td>$126.34</td>
-                                    <td>/blog/post.html</td>
-                                    <td>1233</td>
-                                    <td>93.2%</td>
-                                    <td>$126.34</td>
-                                </tr> -->
-                                </tbody>
-                            </table>
-                        </div>
-                        </div>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
             </ng-template>
         </ngb-tab>
         <ngb-tab>
             <ng-template ngbTabTitle><b>Escalation</b> received</ng-template>
             <ng-template ngbTabContent>
-                <p>Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table
-                craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl
-                cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit. Keytar helvetica VHS salvia
-                yr, vero magna velit sapiente labore stumptown. Vegan fanny pack odio cillum wes anderson 8-bit, sustainable jean
-                shorts beard ut DIY ethical culpa terry richardson biodiesel. Art party scenester stumptown, tumblr butcher vero
-                sint qui sapiente accusamus tattooed echo park.</p>
+                <p>Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko
+                    farm-to-table
+                    craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts
+                    ullamco ad vinyl
+                    cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit. Keytar
+                    helvetica VHS salvia
+                    yr, vero magna velit sapiente labore stumptown. Vegan fanny pack odio cillum wes anderson 8-bit,
+                    sustainable jean
+                    shorts beard ut DIY ethical culpa terry richardson biodiesel. Art party scenester stumptown, tumblr
+                    butcher vero
+                    sint qui sapiente accusamus tattooed echo park.</p>
             </ng-template>
         </ngb-tab>
     </ngb-tabset>

@@ -1,20 +1,28 @@
 <div [@routerTransition]>
-    <h4 class="text-muted">Search Job Sheet</h4>
-
+    <div class="card-header">
+        <h4 class="text-muted">Search Job Sheet</h4>
+    </div>
     <div class="card-header card-header-global search-job-card">
-        <div class="row">
-            <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="text" placeholder="Enter Job Sheet Number" aria-label="Search">
-                <button class="btn btn-primary btn-default my-2 my-sm-0" type="submit">Search</button>
-            </form>
+        <div class="card bg-light mb-3">
+            <div class="card-header">
+                <div class="row">
+                    <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" type="text" placeholder="Enter Job Sheet Number" aria-label="Search">
+                        <button class="btn btn-primary btn-default my-2 my-sm-0" type="submit">Search</button>
+                    </form>
+                </div>
+                <br>
+                <div class="row alert alert-danger" *ngIf="false">
+                    <strong>You have a new customer. Click create Job Sheet to Proceed!</strong>
+                </div>
+            </div>
         </div>
-        <br>
-        <div class="row alert alert-danger">
-            <strong>You have a new customer. Click create Job Sheet to Proceed!</strong>
-        </div>
-        <br>
-        <div class="row" *ngIf="true">
-            <a href="" class="btn btn-primary btn-md pull-right" role="button">CREATE NEW JOB SHEET</a>
+        <div class="card bg-light mb-3">
+            <div class="card-header">
+                <div class="row" *ngIf="true">
+                    <a href="" class="btn btn-primary btn-md pull-right" role="button">CREATE NEW JOB SHEET</a>
+                </div>
+            </div>
         </div>
         <br>
         <div class="row" *ngIf="false">
