@@ -27,26 +27,26 @@
                 <div class="row register-form">
                   <div class="col-md-6">
                     <div class="form-group">
-                      <input type="text" class="form-control" name="firstName" [(ngModel)]="regisModel.first_name" #firstName="ngModel" [ngClass]="{ 'is-invalid': regisForm.submitted && firstName.invalid }" placeholder="First Name *"  required />
+                      <input type="text" class="form-control" name="firstName" [(ngModel)]="regisData.first_name" #firstName="ngModel" [ngClass]="{ 'is-invalid': regisForm.submitted && firstName.invalid }" placeholder="First Name *"  required />
                       <div *ngIf="regisForm.submitted && firstName.invalid" class="invalid-feedback">
                           <div *ngIf="firstName.errors.required">First Name is required</div>
                       </div>
                     </div>
                     <div class="form-group">
-                      <input type="text" class="form-control" name="lastName" [(ngModel)]="regisModel.last" #lastName="ngModel" [ngClass]="{ 'is-invalid': regisForm.submitted && lastName.invalid }"placeholder="Last Name *" value="" required/>
+                      <input type="text" class="form-control" name="lastName" [(ngModel)]="regisData.last" #lastName="ngModel" [ngClass]="{ 'is-invalid': regisForm.submitted && lastName.invalid }"placeholder="Last Name *" value="" required/>
                       <div *ngIf="regisForm.submitted && lastName.invalid" class="invalid-feedback">
                           <div *ngIf="lastName.errors.required">Last Name is required</div>
                       </div>
                     </div>
                     <div class="form-group">
-                      <input type="email" class="form-control"  name="email" [(ngModel)]="regisModel.email" #email="ngModel" [ngClass]="{ 'is-invalid': regisForm.submitted && email.invalid }" placeholder="Email *" value="" required />
+                      <input type="email" class="form-control"  name="email" [(ngModel)]="regisData.email" #email="ngModel" [ngClass]="{ 'is-invalid': regisForm.submitted && email.invalid }" placeholder="Email *" value="" required />
                       <div *ngIf="regisForm.submitted && email.invalid" class="invalid-feedback">
                           <div *ngIf="email.errors.required">Email is required</div>
                           <div *ngIf="email.errors.email">Email must be a valid email address</div>
                       </div>
                     </div>
                     <div class="form-group">
-                      <input type="tel" maxlength="10" minlength="10" class="form-control" name="phone" [(ngModel)]="regisModel.mobile_no" #phone="ngModel" [ngClass]="{ 'is-invalid': regisForm.submitted && phone.invalid }" placeholder="Phone *" value="" required/>
+                      <input type="tel" maxlength="10" minlength="10" class="form-control" name="phone" [(ngModel)]="regisData.mobile_no" #phone="ngModel" [ngClass]="{ 'is-invalid': regisForm.submitted && phone.invalid }" placeholder="Phone *" value="" required/>
                       <div *ngIf="regisForm.submitted && phone.invalid" class="invalid-feedback">
                           <div *ngIf="phone.errors.required">Mobile No. is required</div>
                           <div *ngIf="phone.errors.minlength">Invalid Mobile No.:</div>
@@ -55,22 +55,23 @@
                   </div>
                   <div class="col-md-6">
                     <div class="form-group">
-                      <input type="text" class="form-control" name="orgName" [(ngModel)]="regisModel.org_name" #orgName="ngModel" [ngClass]="{ 'is-invalid': regisForm.submitted && firstName.invalid }" placeholder="Organisation Name *" value="" required  />
+                      <input type="text" class="form-control" name="orgName" [(ngModel)]="regisData.org_name" #orgName="ngModel" [ngClass]="{ 'is-invalid': regisForm.submitted && firstName.invalid }" placeholder="Organisation Name *" value="" required  />
                       <div *ngIf="regisForm.submitted && orgName.invalid" class="invalid-feedback">
                           <div *ngIf="orgName.errors.required">Organisation Name is required</div>
                       </div>
                     </div>
                     <div class="form-group">
-                      <input type="text" class="form-control" name="orgName" [(ngModel)]="regisModel.user_id" #userId="ngModel" [ngClass]="{ 'is-invalid': regisForm.submitted && userId.invalid }" placeholder="User ID *" value="" required  />
+                      <input type="text" class="form-control" name="orgName" [(ngModel)]="regisData.user_id" #userId="ngModel" [ngClass]="{ 'is-invalid': regisForm.submitted && userId.invalid }" minlength="5" placeholder="User ID *" value="" required  />
                       <div *ngIf="regisForm.submitted && userId.invalid" class="invalid-feedback">
                           <div *ngIf="userId.errors.required">User Id Name is required</div>
+                          <div *ngIf="userId.errors.minlength">UserID must be at least 5 characters</div>
                       </div>
                     </div>
                     <div class="form-group">
-                      <input type="password" class="form-control" name="password" [(ngModel)]="regisModel.password" #password="ngModel" [ngClass]="{ 'is-invalid': regisForm.submitted && password.invalid }" minlength="4" placeholder="Password *" value=""  required  />
+                      <input type="password" class="form-control" name="password" [(ngModel)]="regisData.password" #password="ngModel" [ngClass]="{ 'is-invalid': regisForm.submitted && password.invalid }" minlength="5" maxlength="9" placeholder="Password *" value=""  required  />
                         <div *ngIf="regisForm.submitted && password.invalid" class="invalid-feedback">
                             <div *ngIf="password.errors.required">Password is required</div>
-                            <div *ngIf="password.errors.minlength">Password must be at least 6 characters</div>
+                            <div *ngIf="password.errors.minlength || password.errors.maxlength">Password strength must be between 5 to 9 characters</div>
                         </div>
                     </div>
                     <div class="form-group">

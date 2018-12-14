@@ -48,13 +48,13 @@ export class LoginComponent implements OnInit {
         
         this.generalClient.loginApi(obj)
       .subscribe(
-        loginData => {
-         console.log(loginData);
-         if(loginData.success){
+        resLoginData => {
+         console.log(resLoginData);
+         if(resLoginData.success){
             localStorage.setItem('isLoggedin', 'true');
          this.router.navigate(['/dashboard']);
          }else{
-             this.message = loginData.message;
+             this.message = resLoginData.message;
          }
          
       },

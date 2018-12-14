@@ -3,7 +3,7 @@ import { routerTransition } from '../router.animations';
 import { TranslateService } from '@ngx-translate/core';
 import {GeneralService} from '../services/general.service';
 import { Router } from '@angular/router'
-import { UserRegistration } from '../shared/models/sharedModel'
+import { UserRegistration,userReg } from '../shared/models/sharedModel'
 
 @Component({
     selector: 'app-signup',
@@ -13,14 +13,16 @@ import { UserRegistration } from '../shared/models/sharedModel'
 })
 export class SignupComponent implements OnInit {
     
-    
+    public message : string;
     constructor(private translate: TranslateService,public router: Router, private generalClient: GeneralService) {
         this.translate.addLangs(['en', 'fr', 'ur', 'es', 'it', 'fa', 'de', 'zh-CHS']);
         this.translate.setDefaultLang('en');
         const browserLang = this.translate.getBrowserLang();
         this.translate.use(browserLang.match(/en|fr|ur|es|it|fa|de|zh-CHS/) ? browserLang : 'en');
     }
-    regisModel = new UserRegistration();
+
+    regisModel = [];
+    regisData = new userReg();
 
     ngOnInit() {
     }
@@ -40,8 +42,13 @@ export class SignupComponent implements OnInit {
     
         this.generalClient.registrationApi(obj)
       .subscribe(
-       data => {
-         console.log(data)
+        resRegisData => {
+         console.log(resRegisData);
+         if(resRegisData.success){
+          this.router.navigate(['/dashboard']);
+          }else{
+              this.message = resRegisData.message;
+          }
       },
       error => {
           console.log(error);
@@ -58,7 +65,10 @@ export class SignupComponent implements OnInit {
     //   }
 
       onSubmit(){
-        this.userRegis(this.regisModel)
+        this.regisData.data="register";
+        this.regisModel = [];
+        this.regisModel.push(this.regisData);
+        this.userRegis(this.regisModel);
         // this.router.navigate(['/dashboard']);
         console.log(this.regisModel);
       }
