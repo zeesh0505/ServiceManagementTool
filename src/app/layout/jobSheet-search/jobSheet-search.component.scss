@@ -4,3 +4,24 @@
 // .card-header{
 //     padding: 0.3rem 1.25rem;
 // }
+
+.dash-form-control {
+    .input-group-text{
+        padding: 0 0 0 0;
+    }
+
+    .form-control{
+        padding: 0 0 0 8px;
+        margin: 0 0 0 0;
+        height: 1.4rem;
+        font-size: 0.9rem;
+    }
+    .card-header{
+        padding: 0.3rem 1.25rem;
+    }
+}
+
+.jobsheet-table-font{
+    font-weight: 500;
+    font-size: 0.75rem;
+}

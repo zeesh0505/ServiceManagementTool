@@ -3,69 +3,80 @@
         <h4 class="text-muted">Search Job Sheet</h4>
     </div>
     <div class="card-header card-header-global search-job-card">
-        <div class="card bg-light mb-3">
-            <div class="card-header">
-                <div class="row">
+        <!-- <div class="card bg-light mb-3"> -->
+            <!-- <div class="card-header"> -->
+                <div class="row justify-content-center">
                     <form class="form-inline my-2 my-lg-0">
+                            <select class="form-control filter-wid-dd">
+                                    <option>Name</option>
+                                    <option>Date</option>
+                                    <option>Job Sheet No</option>
+                                    <option>IMEI No</option>
+                                </select>
                         <input class="form-control mr-sm-2" type="text" placeholder="Enter Job Sheet Number" aria-label="Search">
                         <button class="btn btn-primary btn-default my-2 my-sm-0" type="submit">Search</button>
                     </form>
                 </div>
                 <br>
-                <div class="row alert alert-danger" *ngIf="false">
+                <div class="row alert alert-danger justify-content-center" *ngIf="false">
                     <strong>You have a new customer. Click create Job Sheet to Proceed!</strong>
                 </div>
-            </div>
-        </div>
-        <div class="card bg-light mb-3">
-            <div class="card-header">
-                <div class="row" *ngIf="true">
-                    <a href="" class="btn btn-primary btn-md pull-right" role="button">CREATE NEW JOB SHEET</a>
+            <!-- </div> -->
+        <!-- </div> -->
+        <!-- <div class="card bg-light mb-3"> -->
+            <!-- <div class="card-header"> -->
+                <div class="row justify-content-center" *ngIf="false">
+                    <a href="" class="btn btn-primary btn-md" role="button">CREATE NEW JOB SHEET</a>
                 </div>
-            </div>
-        </div>
+            <!-- </div> -->
+        <!-- </div> -->
+    </div>
         <br>
         <div class="row" *ngIf="false">
             <div class="card mb-3 dash-form-control">
                 <div class="card-body table-responsive jobsheet-table-font">
-                    <table class="table table-hover table-striped table-bordered">
-                        <thead>
-                            <tr>
-                                <th>Date</th>
-                                <th>Job Sheet No.</th>
-                                <th>IMEI No./Sl No.</th>
-                                <th>Mobile No.</th>
-                                <th>Device Name</th>
-                                <th>Cust. Name</th>
-                                <th>Status</th>
-                                <th>TAT</th>
-                                <th>Escalated to</th>
-                                <th>Current Assighnee</th>
-                                <th>Action</th>
-                                <th>Revenue</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>/index.html</td>
-                                <td>1265</td>
-                                <td>32.3%</td>
-                                <td>$321.33</td>
-                                <td>/index.html</td>
-                                <td>1265</td>
-                                <td>32.3%</td>
-                                <td>$321.33</td>
-                                <td>/index.html</td>
-                                <td>1265</td>
-                                <td>32.3%</td>
-                                <td>$321.33</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
+                        <table class="table table-hover table-striped table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Job Sheet No.</th>
+                                    <th>IMEI No./Sl No.</th>
+                                    <th>Mobile No.</th>
+                                    <th>Device Name</th>
+                                    <th>Cust. Name</th>
+                                    <th>Status</th>
+                                    <th>TAT</th>
+                                    <th>Escalated to</th>
+                                    <th>Current Assighnee</th>
+                                    <th>Action</th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let item of jobSheetDetail">
+                                    <td>{{item.jbDate}}</td>
+                                    <td>{{item.jbNo}}</td>
+                                    <td>{{item.imeiNo}}</td>
+                                    <td>{{item.mobNo}}</td>
+                                    <td>{{item.deviceName}}</td>
+                                    <td>{{item.custName}}</td>
+                                    <td>{{item.jbstatus}}</td>
+                                    <td>{{item.tat}}</td>
+                                    <td>{{item.escltdTo}}</td>
+                                    <td>{{item.crrntAssn}}</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
             </div>
         </div>
 
-    </div>
+    
 
 </div>

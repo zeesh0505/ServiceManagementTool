@@ -8,6 +8,10 @@
             <i class="fa fa-fw fa-edit"></i>&nbsp;
             <span>{{ 'Search JobSheet' | translate }}</span>
         </a>
+        <a [routerLink]="['/create-jobsheet']" [routerLinkActive]="['router-link-active']" class="list-group-item">
+            <i class="fa fa-fw fa-edit"></i>&nbsp;
+            <span>{{ 'Create Jobsheet' | translate }}</span>
+        </a>
         <a [routerLink]="['/charts']" [routerLinkActive]="['router-link-active']" class="list-group-item">
             <i class="fa fa-fw fa-bar-chart-o"></i>&nbsp;
             <span>{{ 'Charts' | translate }}</span>
@@ -149,7 +153,7 @@
         </div>
     </div>
     <div class="toggle-button" [ngClass]="{collapsed: collapsed}" (click)="toggleCollapsed()">
-        <i class="fa fa-fw fa-angle-double-left"></i>&nbsp;
+        <i class="fa fa-fw" [ngClass]="{'fa-angle-double-left': collapsed === false, 'fa-angle-double-right': collapsed}"></i>&nbsp;
         <span>{{ 'Collapse Sidebar' | translate }}</span>
     </div>
 </nav>
