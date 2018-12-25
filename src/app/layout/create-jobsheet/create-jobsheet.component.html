@@ -1,13 +1,17 @@
 <div class="cjobsheet" [@routerTransition]>
-    <div class="card-header csearch-op-spacing">
-        <h4 class="text-muted">Create Job Sheet</h4>
-    </div>
-    <div class="col-sm-12">
-        <div class="card text-white bg-info  mb-3">
-            <div class="card-header" (click)="isCollapsedPanel1 = !isCollapsedPanel1" [attr.aria-expanded]="!isCollapsed1"
-                aria-controls="collapse1"><strong>Customer Details</strong></div>
-            <div class="card-body cust-detailfont" [ngbCollapse]="isCollapsedPanel1">
-                <!-- <div class="row">
+  <div class="card-header csearch-op-spacing"><h4 class="text-muted">Create Job Sheet</h4></div>
+  <div class="col-sm-12">
+    <div class="card text-white bg-info  mb-3">
+      <div
+        class="card-header"
+        (click)="isCollapsedPanel1 = !isCollapsedPanel1"
+        [attr.aria-expanded]="!isCollapsed1"
+        aria-controls="collapse1"
+      >
+        <strong>Customer Details</strong>
+      </div>
+      <div class="card-body cust-detailfont" [ngbCollapse]="isCollapsedPanel1">
+        <!-- <div class="row">
                     <div class="col-sm-4 adj-display">
                         <div class="input-group-prepend">
                             <span class="input-group-text">Customer ID</span>
@@ -161,158 +165,341 @@
                         <input type="text" class="form-control" />
                     </div>
                 </div> -->
-                <div class="row">
-                    <div class="col-sm-4">
-                        <div class="row">
-                            <div class="col-sm-6 adj-right-pad">
-                                <label class="pull-left adj-fon">Customer ID</label>
-                                <span class="pull-right adj-fon">:</span>
-                            </div>
-                            <div class="col-sm-6">
-                                <input type="text" class="form-control" />
-                            </div>
-                        </div>
-                    </div>
-                    <hr>
-                    <div class="col-sm-4">
-                        <div class="row">
-                            <div class="col-sm-6 adj-right-pad">
-                                <label class="pull-left adj-fon">Customer Category*</label>
-                                <span class="pull-right adj-fon">:</span>
+        <div class="row">
+          <div class="col-sm-4">
+            <div class="row">
+              <div class="col-sm-6 adj-right-pad">
+                <label class="pull-left adj-fon">Customer ID</label> <span class="pull-right adj-fon">:</span>
+              </div>
+              <div class="col-sm-6"><input type="text" class="form-control" /></div>
+            </div>
+          </div>
+          <hr />
+          <div class="col-sm-4">
+            <div class="row">
+              <div class="col-sm-6 adj-right-pad">
+                <label class="pull-left adj-fon">Customer Category*</label> <span class="pull-right adj-fon">:</span>
+              </div>
+              <div class="col-sm-6"><input type="text" class="form-control" /></div>
+            </div>
+          </div>
+          <hr />
+          <div class="col-sm-4">
+            <div class="row">
+              <div class="col-sm-6 adj-right-pad">
+                <label class="pull-left adj-fon">Customer Sub Category*</label> <span class="pull-right adj-fon">:</span>
+              </div>
+              <div class="col-sm-6"><input type="text" class="form-control" /></div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-4">
+            <div class="row">
+              <div class="col-sm-6 adj-right-pad">
+                <label class="pull-left adj-fon">First Name</label> <span class="pull-right adj-fon">:</span>
+              </div>
+              <div class="col-sm-6"><input type="text" class="form-control" /></div>
+            </div>
+          </div>
+          <hr />
+          <div class="col-sm-4">
+            <div class="row">
+              <div class="col-sm-6 adj-right-pad">
+                <label class="pull-left adj-fon">Middle Name</label> <span class="pull-right adj-fon">:</span>
+              </div>
+              <div class="col-sm-6"><input type="text" class="form-control" /></div>
+            </div>
+          </div>
+          <hr />
+          <div class="col-sm-4">
+            <div class="row">
+              <div class="col-sm-6 adj-right-pad">
+                <label class="pull-left adj-fon">Last Name</label> <span class="pull-right adj-fon">:</span>
+              </div>
+              <div class="col-sm-6"><input type="text" class="form-control" /></div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-4">
+            <div class="row">
+              <div class="col-sm-6 adj-right-pad">
+                <label class="pull-left adj-fon">Email ID</label> <span class="pull-right adj-fon">:</span>
+              </div>
+              <div class="col-sm-6"><input type="text" class="form-control" /></div>
+            </div>
+          </div>
+          <hr />
+          <div class="col-sm-4">
+            <div class="row">
+              <div class="col-sm-6 adj-right-pad">
+                <label class="pull-left adj-fon">Mobile No.</label> <span class="pull-right adj-fon">:</span>
+              </div>
+              <div class="col-sm-6"><input type="text" class="form-control" /></div>
+            </div>
+          </div>
+          <hr />
+          <div class="col-sm-4">
+            <div class="row">
+              <div class="col-sm-6 adj-right-pad">
+                <label class="pull-left adj-fon">Alternate No.</label> <span class="pull-right adj-fon">:</span>
+              </div>
+              <div class="col-sm-6"><input type="text" class="form-control" /></div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-4">
+            <div class="row">
+              <div class="col-sm-6 adj-right-pad"><label class="pull-left adj-fon">Select If DND Activated?</label></div>
+              <div class="col-sm-6"><input type="checkbox" class="form-control cjs-checkbox" /></div>
+            </div>
+          </div>
+          <hr />
+          <div class="col-sm-4">
+            <div class="row">
+              <div class="col-sm-6 adj-right-pad">
+                <label class="pull-left adj-fon">Company Name</label> <span class="pull-right adj-fon">:</span>
+              </div>
+              <div class="col-sm-6"><input type="text" class="form-control" /></div>
+            </div>
+          </div>
+          <hr />
+          <div class="col-sm-4">
+            <div class="row">
+              <div class="col-sm-6 adj-right-pad">
+                <label class="pull-left adj-fon">Customer Segment</label> <span class="pull-right adj-fon">:</span>
+              </div>
+              <div class="col-sm-6"><input type="text" class="form-control" /></div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-4">
+            <div class="row">
+              <div class="col-sm-6 adj-right-pad">
+                <label class="pull-left adj-fon">Address*</label> <span class="pull-right adj-fon">:</span>
+              </div>
+              <div class="col-sm-6"><input type="text" class="form-control" /></div>
+            </div>
+          </div>
+          <hr />
+          <div class="col-sm-4">
+            <div class="row">
+              <div class="col-sm-6 adj-right-pad">
+                <label class="pull-left adj-fon">Pincode*</label> <span class="pull-right adj-fon">:</span>
+              </div>
+              <div class="col-sm-6"><input type="text" class="form-control" /></div>
+            </div>
+          </div>
+          <hr />
+          <div class="col-sm-4">
+            <div class="row">
+              <div class="col-sm-6 adj-right-pad">
+                <label class="pull-left adj-fon">Area*</label> <span class="pull-right adj-fon">:</span>
+              </div>
+              <div class="col-sm-6"><input type="text" class="form-control" /></div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-4">
+            <div class="row">
+              <div class="col-sm-6 adj-right-pad">
+                <label class="pull-left adj-fon">City</label> <span class="pull-right adj-fon">:</span>
+              </div>
+              <div class="col-sm-6"><input type="text" class="form-control" /></div>
+            </div>
+          </div>
+          <hr />
+          <div class="col-sm-4">
+            <div class="row">
+              <div class="col-sm-6 adj-right-pad">
+                <label class="pull-left adj-fon">State</label> <span class="pull-right adj-fon">:</span>
+              </div>
+              <div class="col-sm-6"><input type="text" class="form-control" /></div>
+            </div>
+          </div>
+          <hr />
+          <div class="col-sm-4">
+            <div class="row">
+              <div class="col-sm-6 adj-right-pad">
+                <label class="pull-left adj-fon">Country</label> <span class="pull-right adj-fon">:</span>
+              </div>
+              <div class="col-sm-6"><input type="text" class="form-control" /></div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-4">
+            <div class="row">
+              <div class="col-sm-6 adj-right-pad">
+                <label class="pull-left adj-fon">TIN No.</label> <span class="pull-right adj-fon">:</span>
+              </div>
+              <div class="col-sm-6"><input type="text" class="form-control" /></div>
+            </div>
+          </div>
+          <hr />
+          <div class="col-sm-4">
+            <div class="row">
+              <div class="col-sm-6 adj-right-pad">
+                <label class="pull-left adj-fon">GST No.</label> <span class="pull-right adj-fon">:</span>
+              </div>
+              <div class="col-sm-6"><input type="text" class="form-control" /></div>
+            </div>
+          </div>
+          <div class="col-sm-4"></div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-                            </div>
-                            <div class="col-sm-6">
-                                <input type="text" class="form-control" />
-                            </div>
-                        </div>
-                    </div>
-                    <hr>
-                    <div class="col-sm-4">
-                        <div class="row">
-                            <div class="col-sm-6 adj-right-pad">
-                                <label class="pull-left adj-fon">Customer Sub Category*</label>
-                                <span class="pull-right adj-fon">:</span>
-                            </div>
-                            <div class="col-sm-6">
-                                <input type="text" class="form-control" />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-4">
-                        <div class="row">
-                            <div class="col-sm-6 adj-right-pad">
-                                <label class="pull-left adj-fon">First Name</label>
-                                <span class="pull-right adj-fon">:</span>
-                            </div>
-                            <div class="col-sm-6">
-                                <input type="text" class="form-control" />
-                            </div>
-                        </div>
-                    </div>
-                    <hr>
-                    <div class="col-sm-4">
-                        <div class="row">
-                            <div class="col-sm-6 adj-right-pad">
-                                <label class="pull-left adj-fon">Middle Name</label>
-                                <span class="pull-right adj-fon">:</span>
-                            </div>
-                            <div class="col-sm-6">
-                                <input type="text" class="form-control" />
-                            </div>
-                        </div>
-                    </div>
-                    <hr>
-                    <div class="col-sm-4">
-                        <div class="row">
-                            <div class="col-sm-6 adj-right-pad">
-                                <label class="pull-left adj-fon">Last Name</label>
-                                <span class="pull-right adj-fon">:</span>
-                            </div>
-                            <div class="col-sm-6">
-                                <input type="text" class="form-control" />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-4">
-                        <div class="row">
-                            <div class="col-sm-6 adj-right-pad">
-                                <label class="pull-left adj-fon">Email ID</label>
-                                <span class="pull-right adj-fon">:</span>
-                            </div>
-                            <div class="col-sm-6">
-                                <input type="text" class="form-control" />
-                            </div>
-                        </div>
-                    </div>
-                    <hr>
-                    <div class="col-sm-4">
-                        <div class="row">
-                            <div class="col-sm-6 adj-right-pad">
-                                <label class="pull-left adj-fon">Mobile No.</label>
-                                <span class="pull-right adj-fon">:</span>
-                            </div>
-                            <div class="col-sm-6">
-                                <input type="text" class="form-control" />
-                            </div>
-                        </div>
-                    </div>
-                    <hr>
-                    <div class="col-sm-4">
-                        <div class="row">
-                            <div class="col-sm-6 adj-right-pad">
-                                <label class="pull-left adj-fon">Alternate No.</label>
-                                <span class="pull-right adj-fon">:</span>
-                            </div>
-                            <div class="col-sm-6">
-                                <input type="text" class="form-control" />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-4">
-                        <div class="row">
-                            <div class="col-sm-6 adj-right-pad">
-                                <label class="pull-left adj-fon">Select If DND Activated?</label>
-
-                            </div>
-                            <div class="col-sm-6">
-                                <input type="checkbox" class="form-control cjs-checkbox" />
-
-
-                            </div>
-                        </div>
-                    </div>
-                    <hr>
-                    <div class="col-sm-4">
-                        <div class="row">
-                            <div class="col-sm-6 adj-right-pad">
-                                <label class="pull-left adj-fon">Company Name</label>
-                                <span class="pull-right adj-fon">:</span>
-                            </div>
-                            <div class="col-sm-6">
-                                <input type="text" class="form-control" />
-                            </div>
-                        </div>
-                    </div>
-                    <hr>
-                    <div class="col-sm-4">
-                        <div class="row">
-                            <div class="col-sm-6 adj-right-pad">
-                                <label class="pull-left">Customer Segment</label>
-                                <span class="pull-right adj-fon">:</span>
-                            </div>
-                            <div class="col-sm-6">
-                                <input type="text" class="form-control" />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
+  <div class="col-sm-12">
+    <div class="card text-white bg-info  mb-3">
+      <div
+        class="card-header"
+        (click)="isCollapsedPanel2 = !isCollapsedPanel2"
+        [attr.aria-expanded]="!isCollapsed2"
+        aria-controls="collapse1"
+      >
+        <strong>Product</strong>
+      </div>
+      <div class="card-body cust-detailfont" [ngbCollapse]="isCollapsedPanel2">
+        <div class="row">
+          <div class="col-sm-4">
+            <div class="row">
+              <div class="col-sm-6 adj-right-pad">
+                <label class="pull-left adj-fon">Product Category*</label> <span class="pull-right adj-fon">:</span>
+              </div>
+              <div class="col-sm-6">
+                <select class="form-control">
+                  <option>Name</option>
+                  <option>Date</option>
+                  <option>Job Sheet No</option>
+                  <option>IMEI No</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <hr />
+          <div class="col-sm-4">
+            <div class="row">
+              <div class="col-sm-6 adj-right-pad">
+                <label class="pull-left adj-fon">OEM*</label> <span class="pull-right adj-fon">:</span>
+              </div>
+              <div class="col-sm-6">
+                <select class="form-control">
+                  <option>Name</option>
+                  <option>Date</option>
+                  <option>Job Sheet No</option>
+                  <option>IMEI No</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <hr />
+          <div class="col-sm-4">
+            <div class="row">
+              <div class="col-sm-6 adj-right-pad">
+                <label class="pull-left adj-fon">Model*</label> <span class="pull-right adj-fon">:</span>
+              </div>
+              <div class="col-sm-6">
+                <select class="form-control">
+                  <option>Name</option>
+                  <option>Date</option>
+                  <option>Job Sheet No</option>
+                  <option>IMEI No</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-4">
+            <div class="row">
+              <div class="col-sm-6 adj-right-pad">
+                <label class="pull-left adj-fon">Product Name</label> <span class="pull-right adj-fon">:</span>
+              </div>
+              <div class="col-sm-6"><input type="text" class="form-control" /></div>
+            </div>
+          </div>
+          <hr />
+          <div class="col-sm-4">
+            <div class="row">
+              <div class="col-sm-6 adj-right-pad">
+                <label class="pull-left adj-fon">Serial/IMEI No. 1</label> <span class="pull-right adj-fon">:</span>
+              </div>
+              <div class="col-sm-6"><input type="text" class="form-control" /></div>
+            </div>
+          </div>
+          <hr />
+          <div class="col-sm-4">
+            <div class="row">
+              <div class="col-sm-6 adj-right-pad">
+                <label class="pull-left adj-fon">ESN No. 1*</label> <span class="pull-right adj-fon">:</span>
+              </div>
+              <div class="col-sm-6"><input type="text" class="form-control" /></div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-4">
+            <div class="row">
+              <div class="col-sm-6 adj-right-pad">
+                <label class="pull-left adj-fon">ESN No. 2*</label> <span class="pull-right adj-fon">:</span>
+              </div>
+              <div class="col-sm-6"><input type="text" class="form-control" /></div>
+            </div>
+          </div>
+          <hr />
+          <div class="col-sm-4">
+            <div class="row">
+              <div class="col-sm-6 adj-right-pad">
+                <label class="pull-left adj-fon">Warranty Status</label> <span class="pull-right adj-fon">:</span>
+              </div>
+              <div class="col-sm-6"><input type="text" class="form-control" /></div>
+            </div>
+          </div>
+          <hr />
+          <div class="col-sm-4">
+            <div class="row">
+              <div class="col-sm-6 adj-right-pad">
+                <label class="pull-left adj-fon">Invoice Ref No.</label> <span class="pull-right adj-fon">:</span>
+              </div>
+              <div class="col-sm-6"><input type="text" class="form-control" /></div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-4">
+            <div class="row">
+              <div class="col-sm-6 adj-right-pad">
+                <label class="pull-left adj-fon">D.O.P(As per Customer)</label> <span class="pull-right adj-fon">:</span>
+              </div>
+              <div class="col-sm-6"><input type="checkbox" class="form-control cjs-checkbox" /></div>
+            </div>
+          </div>
+          <hr />
+          <div class="col-sm-4">
+            <div class="row">
+              <div class="col-sm-6 adj-right-pad">
+                <label class="pull-left adj-fon">Upload Invice</label> <span class="pull-right adj-fon">:</span>
+              </div>
+              <div class="col-sm-6"><input type="text" class="form-control" /></div>
+            </div>
+          </div>
+          <hr />
+          <div class="col-sm-4">
+            <div class="row">
+              <div class="col-sm-6 adj-right-pad">
+                <label class="pull-left adj-fon">Customer Segment</label> <span class="pull-right adj-fon">:</span>
+              </div>
+              <div class="col-sm-6"><input type="text" class="form-control" /></div>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="row">
                     <div class="col-sm-4">
                         <div class="row">
                             <div class="col-sm-6 adj-right-pad">
@@ -348,8 +535,8 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="row">
+                </div> -->
+        <!-- <div class="row">
                     <div class="col-sm-4">
                         <div class="row">
                             <div class="col-sm-6 adj-right-pad">
@@ -385,8 +572,8 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="row">
+                </div> -->
+        <!-- <div class="row">
                     <div class="col-sm-4">
                         <div class="row">
                             <div class="col-sm-6 adj-right-pad">
@@ -411,278 +598,16 @@
                         </div>
                     </div>
                     <div class="col-sm-4"></div>
-                </div>
-            </div>
-        </div>
+                </div> -->
+      </div>
     </div>
+  </div>
 
-    <div class="col-sm-12">
-        <div class="card text-white bg-info  mb-3">
-            <div class="card-header" (click)="isCollapsedPanel2 = !isCollapsedPanel2" [attr.aria-expanded]="!isCollapsed2"
-                aria-controls="collapse1"><strong>Customer Details</strong></div>
-            <div class="card-body cust-detailfont" [ngbCollapse]="isCollapsedPanel2">
-                <div class="row">
-                    <div class="col-sm-4">
-                        <div class="row">
-                            <div class="col-sm-6 adj-right-pad">
-                                <label class="pull-left adj-fon">Customer ID</label>
-                                <span class="pull-right adj-fon">:</span>
-                            </div>
-                            <div class="col-sm-6">
-                                <input type="text" class="form-control" />
-                            </div>
-                        </div>
-                    </div>
-                    <hr>
-                    <div class="col-sm-4">
-                        <div class="row">
-                            <div class="col-sm-6 adj-right-pad">
-                                <label class="pull-left adj-fon">Customer Category*</label>
-                                <span class="pull-right adj-fon">:</span>
-
-                            </div>
-                            <div class="col-sm-6">
-                                <input type="text" class="form-control" />
-                            </div>
-                        </div>
-                    </div>
-                    <hr>
-                    <div class="col-sm-4">
-                        <div class="row">
-                            <div class="col-sm-6 adj-right-pad">
-                                <label class="pull-left adj-fon">Customer Sub Category*</label>
-                                <span class="pull-right adj-fon">:</span>
-                            </div>
-                            <div class="col-sm-6">
-                                <input type="text" class="form-control" />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-4">
-                        <div class="row">
-                            <div class="col-sm-6 adj-right-pad">
-                                <label class="pull-left adj-fon">First Name</label>
-                                <span class="pull-right adj-fon">:</span>
-                            </div>
-                            <div class="col-sm-6">
-                                <input type="text" class="form-control" />
-                            </div>
-                        </div>
-                    </div>
-                    <hr>
-                    <div class="col-sm-4">
-                        <div class="row">
-                            <div class="col-sm-6 adj-right-pad">
-                                <label class="pull-left adj-fon">Middle Name</label>
-                                <span class="pull-right adj-fon">:</span>
-                            </div>
-                            <div class="col-sm-6">
-                                <input type="text" class="form-control" />
-                            </div>
-                        </div>
-                    </div>
-                    <hr>
-                    <div class="col-sm-4">
-                        <div class="row">
-                            <div class="col-sm-6 adj-right-pad">
-                                <label class="pull-left adj-fon">Last Name</label>
-                                <span class="pull-right adj-fon">:</span>
-                            </div>
-                            <div class="col-sm-6">
-                                <input type="text" class="form-control" />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-4">
-                        <div class="row">
-                            <div class="col-sm-6 adj-right-pad">
-                                <label class="pull-left adj-fon">Email ID</label>
-                                <span class="pull-right adj-fon">:</span>
-                            </div>
-                            <div class="col-sm-6">
-                                <input type="text" class="form-control" />
-                            </div>
-                        </div>
-                    </div>
-                    <hr>
-                    <div class="col-sm-4">
-                        <div class="row">
-                            <div class="col-sm-6 adj-right-pad">
-                                <label class="pull-left adj-fon">Mobile No.</label>
-                                <span class="pull-right adj-fon">:</span>
-                            </div>
-                            <div class="col-sm-6">
-                                <input type="text" class="form-control" />
-                            </div>
-                        </div>
-                    </div>
-                    <hr>
-                    <div class="col-sm-4">
-                        <div class="row">
-                            <div class="col-sm-6 adj-right-pad">
-                                <label class="pull-left adj-fon">Alternate No.</label>
-                                <span class="pull-right adj-fon">:</span>
-                            </div>
-                            <div class="col-sm-6">
-                                <input type="text" class="form-control" />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-4">
-                        <div class="row">
-                            <div class="col-sm-6 adj-right-pad">
-                                <label class="pull-left adj-fon">Select If DND Activated?</label>
-
-                            </div>
-                            <div class="col-sm-6">
-                                <input type="checkbox" class="form-control cjs-checkbox" />
-
-
-                            </div>
-                        </div>
-                    </div>
-                    <hr>
-                    <div class="col-sm-4">
-                        <div class="row">
-                            <div class="col-sm-6 adj-right-pad">
-                                <label class="pull-left adj-fon">Company Name</label>
-                                <span class="pull-right adj-fon">:</span>
-                            </div>
-                            <div class="col-sm-6">
-                                <input type="text" class="form-control" />
-                            </div>
-                        </div>
-                    </div>
-                    <hr>
-                    <div class="col-sm-4">
-                        <div class="row">
-                            <div class="col-sm-6 adj-right-pad">
-                                <label class="pull-left">Customer Segment</label>
-                                <span class="pull-right adj-fon">:</span>
-                            </div>
-                            <div class="col-sm-6">
-                                <input type="text" class="form-control" />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-4">
-                        <div class="row">
-                            <div class="col-sm-6 adj-right-pad">
-                                <label class="pull-left adj-fon">Address*</label>
-                                <span class="pull-right adj-fon">:</span>
-                            </div>
-                            <div class="col-sm-6">
-                                <input type="text" class="form-control" />
-                            </div>
-                        </div>
-                    </div>
-                    <hr>
-                    <div class="col-sm-4">
-                        <div class="row">
-                            <div class="col-sm-6 adj-right-pad">
-                                <label class="pull-left adj-fon">Pincode*</label>
-                                <span class="pull-right adj-fon">:</span>
-                            </div>
-                            <div class="col-sm-6">
-                                <input type="text" class="form-control" />
-                            </div>
-                        </div>
-                    </div>
-                    <hr>
-                    <div class="col-sm-4">
-                        <div class="row">
-                            <div class="col-sm-6 adj-right-pad">
-                                <label class="pull-left adj-fon">Area*</label>
-                                <span class="pull-right adj-fon">:</span>
-                            </div>
-                            <div class="col-sm-6">
-                                <input type="text" class="form-control" />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-4">
-                        <div class="row">
-                            <div class="col-sm-6 adj-right-pad">
-                                <label class="pull-left adj-fon">City</label>
-                                <span class="pull-right adj-fon">:</span>
-                            </div>
-                            <div class="col-sm-6">
-                                <input type="text" class="form-control" />
-                            </div>
-                        </div>
-                    </div>
-                    <hr>
-                    <div class="col-sm-4">
-                        <div class="row">
-                            <div class="col-sm-6 adj-right-pad">
-                                <label class="pull-left adj-fon">State</label>
-                                <span class="pull-right adj-fon">:</span>
-                            </div>
-                            <div class="col-sm-6">
-                                <input type="text" class="form-control" />
-                            </div>
-                        </div>
-                    </div>
-                    <hr>
-                    <div class="col-sm-4">
-                        <div class="row">
-                            <div class="col-sm-6 adj-right-pad">
-                                <label class="pull-left adj-fon">Country</label>
-                                <span class="pull-right adj-fon">:</span>
-                            </div>
-                            <div class="col-sm-6">
-                                <input type="text" class="form-control" />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-4">
-                        <div class="row">
-                            <div class="col-sm-6 adj-right-pad">
-                                <label class="pull-left adj-fon">TIN No.</label>
-                                <span class="pull-right adj-fon">:</span>
-                            </div>
-                            <div class="col-sm-6">
-                                <input type="text" class="form-control" />
-                            </div>
-                        </div>
-                    </div>
-                    <hr>
-                    <div class="col-sm-4">
-                        <div class="row">
-                            <div class="col-sm-6 adj-right-pad">
-                                <label class="pull-left adj-fon">GST No.</label>
-                                <span class="pull-right adj-fon">:</span>
-                            </div>
-                            <div class="col-sm-6">
-                                <input type="text" class="form-control" />
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-4"></div>
-                </div>
-            </div>
-        </div>
+  <div class="col-sm-12">
+    <div class="card text-white bg-info  mb-3">
+      <div class="card-body footer-panel justify-contet-right">
+        <div class="d-flex justify-content-end"><button class="btn btn-primary btn-default my-2 my-sm-0" type="submit">Submit</button></div>
+      </div>
     </div>
-
-    <div class="col-sm-12">
-        <div class="card text-white bg-info  mb-3">
-            <div class="card-body footer-panel justify-contet-right">
-                <div class="d-flex justify-content-end">
-                    <button class="btn btn-primary btn-default my-2 my-sm-0" type="submit">Submit</button>
-                </div>
-            </div>
-        </div>
-    </div>
+  </div>
 </div>

@@ -20,6 +20,9 @@
         font-size: 0.9rem;
     }
     .cust-detailfont {
+        #select .form-control{
+            height: calc(1.5rem + 2px);
+        }
         .adj-fon{
             font-size: 0.8rem;
         }
@@ -32,6 +35,7 @@
         }
         .row{
             padding-bottom: 0.39rem;
+            font-weight: bold;
         }
     }
 
