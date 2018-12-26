@@ -15,13 +15,13 @@ export class CreateJobsheetComponent implements OnInit {
     constructor(private modalService: NgbModal) {}
 
     ngOnInit() {
-        open(content) {
-            this.modalService.open(content).result.then((result) => {
-                this.closeResult = `Closed with: ${result}`;
-            }, (reason) => {
-                this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
-            });
-        }
+        // open(content) {
+        //     this.modalService.open(content).result.then((result) => {
+        //         this.closeResult = `Closed with: ${result}`;
+        //     }, (reason) => {
+        //         this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
+        //     });
+        // }
 
     }
 
