@@ -10,6 +10,10 @@
         </a>
         <a [routerLink]="['/create-jobsheet']" [routerLinkActive]="['router-link-active']" class="list-group-item">
             <i class="fa fa-fw fa-edit"></i>&nbsp;
+            <span>{{ 'Create Customer' | translate }}</span>
+        </a>
+        <a [routerLink]="['/jobsheet-info']" [routerLinkActive]="['router-link-active']" class="list-group-item">
+            <i class="fa fa-fw fa-edit"></i>&nbsp;
             <span>{{ 'Create Jobsheet' | translate }}</span>
         </a>
         <a [routerLink]="['/charts']" [routerLinkActive]="['router-link-active']" class="list-group-item">

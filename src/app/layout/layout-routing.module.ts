@@ -11,6 +11,7 @@ const routes: Routes = [
             { path: 'dashboard', loadChildren: './dashboard/dashboard.module#DashboardModule' },
             { path: 'jobSheet-search', loadChildren: './jobSheet-search/jobSheet-search.module#JobSheetSearchModule' },
             { path: 'create-jobsheet', loadChildren: './create-jobsheet/create-jobsheet.module#CreateJobsheetModule' },
+            { path: 'jobsheet-info', loadChildren: './jobsheet-info/jobsheet-info.module#JobsheetInfoModule' },
             { path: 'charts', loadChildren: './charts/charts.module#ChartsModule' },
             { path: 'tables', loadChildren: './tables/tables.module#TablesModule' },
             { path: 'forms', loadChildren: './form/form.module#FormModule' },
