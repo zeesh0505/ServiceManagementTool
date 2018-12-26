@@ -27,7 +27,6 @@ export class DashboardComponent implements OnInit {
         //     this.jobSheetDetail = data.dummyData;
         //   })
 
-
         this.jobSheetDetail = [
             {
                 "jbDate": "13/12/2018",

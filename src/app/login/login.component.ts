@@ -12,7 +12,7 @@ import {GeneralService} from '../services/general.service';
     animations: [routerTransition()]
 })
 export class LoginComponent implements OnInit {
-
+    public sliders: Array<any> = [];
     public message : string;
     constructor(
         private translate: TranslateService,
@@ -23,6 +23,26 @@ export class LoginComponent implements OnInit {
             this.translate.setDefaultLang('en');
             const browserLang = this.translate.getBrowserLang();
             this.translate.use(browserLang.match(/en|fr|ur|es|it|fa|de|zh-CHS/) ? browserLang : 'en');
+
+            this.sliders.push(
+                {
+                    imagePath: 'https://static.pexels.com/photos/33972/pexels-photo.jpg',
+                    label: 'First slide label',
+                    text:
+                        'Nulla vitae elit libero, a pharetra augue mollis interdum.'
+                },
+                {
+                    imagePath: 'https://images.pexels.com/photos/7097/people-coffee-tea-meeting.jpg',
+                    label: 'Second slide label',
+                    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+                },
+                {
+                    imagePath: 'https://images.pexels.com/photos/872957/pexels-photo-872957.jpeg',
+                    label: 'Third slide label',
+                    text:
+                        'Praesent commodo cursus magna, vel scelerisque nisl consectetur.'
+                }
+            );
     }
 
     loginModel = [];

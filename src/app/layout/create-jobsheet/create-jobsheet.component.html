@@ -680,9 +680,26 @@
         <div class="card text-white bg-info  mb-3">
             <div class="card-body footer-panel justify-contet-right">
                 <div class="d-flex justify-content-end">
-                    <button class="btn btn-primary btn-default my-2 my-sm-0" type="submit">Submit</button>
+                    <button class="btn btn-primary btn-default my-2 my-sm-0" (click)="open(content)" type="submit">Submit</button>
                 </div>
             </div>
         </div>
     </div>
+
+    <ng-template #content let-c="close" let-d="dismiss">
+        <!-- <div class="modal-header">
+            <h4 class="modal-title">Modal title</h4>
+            <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div> -->
+        <div class="modal-body">
+            <p>Customer ID 543268 has created successfully. What action do you want to take</p>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-primary btn-default">Create Job</button>
+            <button type="button" class="btn btn-primary btn-default">Create New Customer</button>
+            <button type="button" class="btn btn-secondary" (click)="c('Close click')">Close</button>
+        </div>
+    </ng-template>
 </div>
