@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { routerTransition } from '../../router.animations';
 import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
 
@@ -10,6 +10,7 @@ import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
 })
 export class JobsheetInfoComponent implements OnInit {
     closeResult: string;
+    public msgDialog = true;
     public isCollapsedPanel1 = false;
     public isCollapsedPanel2 = false;
     constructor(private modalService: NgbModal) {}
