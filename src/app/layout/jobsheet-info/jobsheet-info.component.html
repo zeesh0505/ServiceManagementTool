@@ -1,5 +1,7 @@
 <div class="cjobsheet" [@routerTransition]>
-  <div class="card-header csearch-op-spacing"><h4 class="text-muted">Create Job Sheet</h4></div>
+  <div class="card-header csearch-op-spacing" [@flyInOut]>
+    <h4 class="page-header">Create Job Sheet</h4>
+  </div>
   <div class="col-sm-12">
     <div class="card text-white card-bg  mb-3">
       <div
@@ -157,12 +159,20 @@
                 <label class="pull-left adj-fon">Service request Mode*</label> <span class="pull-right adj-fon">:</span>
               </div>
               <div class="col-sm-6">
-                <select class="form-control">
+                <!-- <select class="form-control">
                   <option>Walk In</option>
                   <option></option>
                   <option></option>
                   <option></option>
-                </select>
+                </select> -->
+                <div ngbDropdown class="d-inline-block dropdown">
+                  <button class="btn btn-outline-success" ngbDropdownToggle>Select</button>
+                  <div ngbDropdownMenu>
+                      <button class="dropdown-item">Walk In</button>
+                      <button class="dropdown-item">Another Action</button>
+                      <button class="dropdown-item">Something else is here</button>
+                  </div>
+              </div>
               </div>
             </div>
           </div>

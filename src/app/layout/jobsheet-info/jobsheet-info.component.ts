@@ -1,12 +1,23 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { routerTransition } from '../../router.animations';
 import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
+import { trigger,style,transition,animate,keyframes,query,stagger,state } from '@angular/animations';
 
 @Component({
     selector: 'jobsheet-info',
     templateUrl: './jobsheet-info.component.html',
     styleUrls: ['./jobsheet-info.component.scss'],
-    animations: [routerTransition()]
+    animations: [routerTransition(),trigger('flyInOut', [
+        // the "in" style determines the "resting" state of the element when it is visible.
+          state('in', style({opacity: 1})),
+    
+          // fade in when created. this could also be written as transition('void => *')
+          transition(':enter', [
+            style({opacity: 0}),
+            animate(1800)
+          ]),
+    
+      ])]
 })
 export class JobsheetInfoComponent implements OnInit {
     closeResult: string;
